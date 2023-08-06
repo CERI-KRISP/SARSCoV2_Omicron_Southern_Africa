@@ -1,0 +1,172 @@
+<beast beautistatus="" beautitemplate="Standard" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.util:beast.core.util:beast.core.parameter:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood:skylinetools.util:skylinetools.parameter" required="BEAST v2.5.0" version="2.5">
+
+
+
+<data id="GP_fixed_clock_1.1_epo_4" name="alignment" spec="Alignment">
+</data>
+
+
+
+<map name="Uniform">beast.math.distributions.Uniform</map>
+<map name="Exponential">beast.math.distributions.Exponential</map>
+<map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+<map name="Normal">beast.math.distributions.Normal</map>
+<map name="Beta">beast.math.distributions.Beta</map>
+<map name="Gamma">beast.math.distributions.Gamma</map>
+<map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+<map name="prior">beast.math.distributions.Prior</map>
+<map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+<map name="OneOnX">beast.math.distributions.OneOnX</map>
+
+
+
+<function arg="@samplingProportion.s:GP_fixed_clock_1.1_epo_4" count="4" id="samplingProportionSlice.s:GP_fixed_clock_1.1_epo_4" index="1" spec="beast.core.util.Slice" />
+<parameter id="becomeUninfectiousRate.s:GP_fixed_clock_1.1_epo_4" lower="0.0" name="RealParameter" upper="Infinity">36.5</parameter>
+
+
+<run chainLength="100000000" id="mcmc" numInitializationAttempts="1000" sampleFromPrior="False" spec="MCMC">
+
+    <state id="state" spec="State" storeEvery="1000000">
+        <tree id="Tree.t:GP_fixed_clock_1.1_epo_4" name="stateNode" spec="beast.evolution.tree.Tree">
+            <trait dateFormat="yyyy-M-dd" id="dateTrait.t:GP_fixed_clock_1.1_epo_4" spec="beast.evolution.tree.TraitSet" traitname="date" value="South_Africa/NICD-N21600-DX03569/2021|EPI_ISL_6647956|Gauteng|2021-11-14=2021-11-14,South_Africa/NICD-N21602-DX040380/2021|EPI_ISL_6647957|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21603-DX64204/2021|EPI_ISL_6647958|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21604-DX64219/2021|EPI_ISL_6647959|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21605-DX64490/2021|EPI_ISL_6647960|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21606-DX64492/2021|EPI_ISL_6647961|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21607-DX64624/2021|EPI_ISL_6647962|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21601-DX04008/2021|EPI_ISL_6698792|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032188/2021|EPI_ISL_6699728|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032189/2021|EPI_ISL_6699729|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032191/2021|EPI_ISL_6699730|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032192/2021|EPI_ISL_6699731|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032195/2021|EPI_ISL_6699732|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032197/2021|EPI_ISL_6699733|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032198/2021|EPI_ISL_6699734|Gauteng|2021-11-14=2021-11-14,South_Africa/CERI-KRISP-K032199/2021|EPI_ISL_6699735|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032201/2021|EPI_ISL_6699736|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032203/2021|EPI_ISL_6699737|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032204/2021|EPI_ISL_6699738|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032205/2021|EPI_ISL_6699739|Gauteng|2021-11-18=2021-11-18,South_Africa/CERI-KRISP-K032206/2021|EPI_ISL_6699740|Gauteng|2021-11-18=2021-11-18,South_Africa/CERI-KRISP-K032207/2021|EPI_ISL_6699741|Gauteng|2021-11-18=2021-11-18,South_Africa/CERI-KRISP-K032211/2021|EPI_ISL_6699743|Gauteng|2021-11-18=2021-11-18,South_Africa/CERI-KRISP-K032214/2021|EPI_ISL_6699744|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032215/2021|EPI_ISL_6699745|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032216/2021|EPI_ISL_6699746|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032217/2021|EPI_ISL_6699747|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032218/2021|EPI_ISL_6699748|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032219/2021|EPI_ISL_6699749|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032221/2021|EPI_ISL_6699750|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032223/2021|EPI_ISL_6699751|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032226/2021|EPI_ISL_6699752|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032227/2021|EPI_ISL_6699753|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032228/2021|EPI_ISL_6699754|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032231/2021|EPI_ISL_6699755|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032232/2021|EPI_ISL_6699756|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032233/2021|EPI_ISL_6699757|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032237/2021|EPI_ISL_6699758|Gauteng|2021-11-21=2021-11-21,South_Africa/CERI-KRISP-K032238/2021|EPI_ISL_6699759|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032239/2021|EPI_ISL_6699760|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032241/2021|EPI_ISL_6699761|Gauteng|2021-11-20=2021-11-20,South_Africa/CERI-KRISP-K032242/2021|EPI_ISL_6699762|Gauteng|2021-11-20=2021-11-20,South_Africa/CERI-KRISP-K032243/2021|EPI_ISL_6699763|Gauteng|2021-11-20=2021-11-20,South_Africa/CERI-KRISP-K032244/2021|EPI_ISL_6699764|Gauteng|2021-11-20=2021-11-20,South_Africa/CERI-KRISP-K032245/2021|EPI_ISL_6699765|Gauteng|2021-11-20=2021-11-20,South_Africa/CERI-KRISP-K032246/2021|EPI_ISL_6699766|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032248/2021|EPI_ISL_6699767|Gauteng|2021-11-21=2021-11-21,South_Africa/CERI-KRISP-K032250/2021|EPI_ISL_6699768|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032251/2021|EPI_ISL_6699769|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032253/2021|EPI_ISL_6699770|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032254/2021|EPI_ISL_6699771|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21665/2021|EPI_ISL_6704864|Gauteng|2021-11-20=2021-11-20,South_Africa/NICD-N21668/2021|EPI_ISL_6704867|Gauteng|2021-11-20=2021-11-20,South_Africa/NICD-N21671/2021|EPI_ISL_6704870|Gauteng|2021-11-20=2021-11-20,South_Africa/NICD-N21672/2021|EPI_ISL_6704871|Gauteng|2021-11-20=2021-11-20,South_Africa/NICD-N21673/2021|EPI_ISL_6704872|Gauteng|2021-11-20=2021-11-20,South_Africa/NICD-N21674/2021|EPI_ISL_6704873|Gauteng|2021-11-20=2021-11-20,South_Africa/NICD-N21675/2021|EPI_ISL_6704874|Gauteng|2021-11-20=2021-11-20,South_Africa/NICD-N21676/2021|EPI_ISL_6704875|Gauteng|2021-11-20=2021-11-20,South_Africa/CERI-KRISP-K032196/2021|EPI_ISL_6782043|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032209/2021|EPI_ISL_6782055|Gauteng|2021-11-18=2021-11-18,South_Africa/CERI-KRISP-K032212/2021|EPI_ISL_6782056|Gauteng|2021-11-18=2021-11-18,South_Africa/CERI-KRISP-K032220/2021|EPI_ISL_6782071|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032224/2021|EPI_ISL_6782079|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032229/2021|EPI_ISL_6782080|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032230/2021|EPI_ISL_6782084|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032236/2021|EPI_ISL_6782090|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032252/2021|EPI_ISL_6782092|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K030835/2021|EPI_ISL_6795188|Gauteng|2021-11-12=2021-11-12,South_Africa/CERI-KRISP-K030836/2021|EPI_ISL_6795189|Gauteng|2021-11-12=2021-11-12,South_Africa/CERI-KRISP-K030837/2021|EPI_ISL_6795190|Gauteng|2021-11-12=2021-11-12,South_Africa/CERI-KRISP-K030840/2021|EPI_ISL_6795192|Gauteng|2021-11-09=2021-11-09,South_Africa/CERI-KRISP-K030842/2021|EPI_ISL_6795193|Gauteng|2021-11-12=2021-11-12,South_Africa/CERI-KRISP-K032304/2021|EPI_ISL_6795833|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032319/2021|EPI_ISL_6795835|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032324/2021|EPI_ISL_6795836|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032331/2021|EPI_ISL_6795837|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032338/2021|EPI_ISL_6795838|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032341/2021|EPI_ISL_6795839|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032343/2021|EPI_ISL_6795840|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032344/2021|EPI_ISL_6795841|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032348/2021|EPI_ISL_6795842|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032356/2021|EPI_ISL_6795844|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032359/2021|EPI_ISL_6795845|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032365/2021|EPI_ISL_6795846|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032366/2021|EPI_ISL_6795847|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032367/2021|EPI_ISL_6795848|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032368/2021|EPI_ISL_6795849|Gauteng|2021-11-15=2021-11-15,South_Africa/CERI-KRISP-K032373/2021|EPI_ISL_6795850|Gauteng|2021-11-13=2021-11-13,South_Africa/CERI-KRISP-K032190/2021|EPI_ISL_6810482|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032202/2021|EPI_ISL_6810483|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032225/2021|EPI_ISL_6810484|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032235_2/2021|EPI_ISL_6810485|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032247/2021|EPI_ISL_6810486|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032249/2021|EPI_ISL_6810487|Gauteng|2021-11-22=2021-11-22,South_Africa/CERI-KRISP-K032300/2021|EPI_ISL_6825389|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032326/2021|EPI_ISL_6825390|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032332/2021|EPI_ISL_6825391|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032340/2021|EPI_ISL_6825392|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032342/2021|EPI_ISL_6825393|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032354/2021|EPI_ISL_6825394|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032355/2021|EPI_ISL_6825395|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032357/2021|EPI_ISL_6825396|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032360/2021|EPI_ISL_6825397|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032370/2021|EPI_ISL_6825398|Gauteng|2021-11-14=2021-11-14,South_Africa/NICD-N21256/2021|EPI_ISL_6900139|Gauteng|2021-11-10=2021-11-10,South_Africa/NICD-N21260/2021|EPI_ISL_6900141|Gauteng|2021-11-11=2021-11-11,South_Africa/NICD-N21261/2021|EPI_ISL_6900142|Gauteng|2021-11-10=2021-11-10,South_Africa/NICD-N21262/2021|EPI_ISL_6900143|Gauteng|2021-11-09=2021-11-09,South_Africa/NICD-N21437/2021|EPI_ISL_6913991|Gauteng|2021-11-09=2021-11-09,South_Africa/NICD-N21438/2021|EPI_ISL_6913992|Gauteng|2021-11-10=2021-11-10,South_Africa/NICD-N21439/2021|EPI_ISL_6913993|Gauteng|2021-11-10=2021-11-10,South_Africa/NICD-N21440/2021|EPI_ISL_6913994|Gauteng|2021-11-10=2021-11-10,South_Africa/NICD-N21441/2021|EPI_ISL_6913995|Gauteng|2021-11-08=2021-11-08,South_Africa/NICD-N21442/2021|EPI_ISL_6913996|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21443/2021|EPI_ISL_6913997|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21444/2021|EPI_ISL_6913998|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21446/2021|EPI_ISL_6913999|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21447/2021|EPI_ISL_6914000|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21448/2021|EPI_ISL_6914001|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21449/2021|EPI_ISL_6914002|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21450/2021|EPI_ISL_6914003|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21451/2021|EPI_ISL_6914004|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21452/2021|EPI_ISL_6914005|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21453/2021|EPI_ISL_6914006|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21454/2021|EPI_ISL_6914007|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21614/2021|EPI_ISL_6914011|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21618/2021|EPI_ISL_6914012|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21620/2021|EPI_ISL_6914013|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21624/2021|EPI_ISL_6914015|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21627/2021|EPI_ISL_6914016|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21630/2021|EPI_ISL_6914017|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21631/2021|EPI_ISL_6914018|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21634/2021|EPI_ISL_6914020|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21635/2021|EPI_ISL_6914021|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21638/2021|EPI_ISL_6914022|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21639/2021|EPI_ISL_6914023|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21641/2021|EPI_ISL_6914024|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21644/2021|EPI_ISL_6914025|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21646/2021|EPI_ISL_6914026|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21648/2021|EPI_ISL_6914027|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21650/2021|EPI_ISL_6914029|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21651/2021|EPI_ISL_6914030|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21655/2021|EPI_ISL_6914031|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21656/2021|EPI_ISL_6914032|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21657/2021|EPI_ISL_6914033|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21661/2021|EPI_ISL_6914036|Gauteng|2021-11-19=2021-11-19,South_Africa/CERI-KRISP-K032301/2021|EPI_ISL_7015172|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032302/2021|EPI_ISL_7015173|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032303/2021|EPI_ISL_7015174|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032305/2021|EPI_ISL_7015175|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032306/2021|EPI_ISL_7015176|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032309/2021|EPI_ISL_7015177|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032310/2021|EPI_ISL_7015178|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032311/2021|EPI_ISL_7015179|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032312/2021|EPI_ISL_7015180|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032313/2021|EPI_ISL_7015181|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032316/2021|EPI_ISL_7015183|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032320/2021|EPI_ISL_7015184|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032321/2021|EPI_ISL_7015185|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032322/2021|EPI_ISL_7015186|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032323/2021|EPI_ISL_7015187|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032325/2021|EPI_ISL_7015188|Gauteng|2021-11-17=2021-11-17,South_Africa/CERI-KRISP-K032329/2021|EPI_ISL_7015190|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032330/2021|EPI_ISL_7015191|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032333/2021|EPI_ISL_7015192|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032334/2021|EPI_ISL_7015193|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032335/2021|EPI_ISL_7015194|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032336/2021|EPI_ISL_7015195|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032337/2021|EPI_ISL_7015196|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032339/2021|EPI_ISL_7015197|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032346/2021|EPI_ISL_7015198|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032347/2021|EPI_ISL_7015199|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032348_2/2021|EPI_ISL_7015200|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032352/2021|EPI_ISL_7015201|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032353/2021|EPI_ISL_7015202|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032358/2021|EPI_ISL_7015203|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032361/2021|EPI_ISL_7015204|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032363/2021|EPI_ISL_7015205|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032364/2021|EPI_ISL_7015206|Gauteng|2021-11-16=2021-11-16,South_Africa/CERI-KRISP-K032369/2021|EPI_ISL_7015207|Gauteng|2021-11-14=2021-11-14,South_Africa/CERI-KRISP-K032372/2021|EPI_ISL_7015208|Gauteng|2021-11-13=2021-11-13,South_Africa/NICD-N21694/2021|EPI_ISL_7337440|Gauteng|2021-11-19=2021-11-19,South_Africa/NICD-N21696/2021|EPI_ISL_7337442|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21697/2021|EPI_ISL_7337443|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21698/2021|EPI_ISL_7337444|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21701/2021|EPI_ISL_7337447|Gauteng|2021-11-19=2021-11-19,South_Africa/NICD-N21702/2021|EPI_ISL_7337448|Gauteng|2021-11-19=2021-11-19,South_Africa/NICD-N21704/2021|EPI_ISL_7337450|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21705/2021|EPI_ISL_7337451|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21706/2021|EPI_ISL_7337452|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21708/2021|EPI_ISL_7337453|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21709/2021|EPI_ISL_7337454|Gauteng|2021-11-19=2021-11-19,South_Africa/NICD-N21710/2021|EPI_ISL_7337455|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21715/2021|EPI_ISL_7337458|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21718/2021|EPI_ISL_7337461|Gauteng|2021-11-21=2021-11-21,South_Africa/NICD-N21719/2021|EPI_ISL_7337462|Gauteng|2021-11-20=2021-11-20,South_Africa/NICD-N21720/2021|EPI_ISL_7337463|Gauteng|2021-11-19=2021-11-19,South_Africa/NICD-N21721/2021|EPI_ISL_7337464|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21722/2021|EPI_ISL_7337465|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21725/2021|EPI_ISL_7337468|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21726/2021|EPI_ISL_7337469|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21727/2021|EPI_ISL_7337470|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21728/2021|EPI_ISL_7337471|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21731/2021|EPI_ISL_7337474|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21732/2021|EPI_ISL_7337475|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21733/2021|EPI_ISL_7337476|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21734/2021|EPI_ISL_7337477|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21735/2021|EPI_ISL_7337478|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21736/2021|EPI_ISL_7337479|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21737/2021|EPI_ISL_7337480|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21739/2021|EPI_ISL_7337482|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21740/2021|EPI_ISL_7337483|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21743/2021|EPI_ISL_7337486|Gauteng|2021-11-19=2021-11-19,South_Africa/NICD-N21744/2021|EPI_ISL_7337487|Gauteng|2021-11-19=2021-11-19,South_Africa/NICD-N21745/2021|EPI_ISL_7337488|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21746/2021|EPI_ISL_7337489|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21749/2021|EPI_ISL_7337495|Gauteng|2021-11-19=2021-11-19,South_Africa/NICD-N21750/2021|EPI_ISL_7337496|Gauteng|2021-11-16=2021-11-16,South_Africa/NICD-N21752/2021|EPI_ISL_7337498|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21753/2021|EPI_ISL_7337499|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21754/2021|EPI_ISL_7337500|Gauteng|2021-11-15=2021-11-15,South_Africa/NICD-N21755/2021|EPI_ISL_7337501|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21757/2021|EPI_ISL_7337503|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21758/2021|EPI_ISL_7337504|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21759/2021|EPI_ISL_7337505|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21760/2021|EPI_ISL_7337506|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21761/2021|EPI_ISL_7337507|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21762/2021|EPI_ISL_7337508|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21763/2021|EPI_ISL_7337509|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21764/2021|EPI_ISL_7337510|Gauteng|2021-11-18=2021-11-18,South_Africa/NICD-N21765/2021|EPI_ISL_7337511|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-N21766/2021|EPI_ISL_7337512|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21769/2021|EPI_ISL_7337515|Gauteng|2021-11-25=2021-11-25,South_Africa/NICD-N21770/2021|EPI_ISL_7337516|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21771/2021|EPI_ISL_7337517|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21774/2021|EPI_ISL_7337520|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21776/2021|EPI_ISL_7337521|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21781/2021|EPI_ISL_7337524|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21782/2021|EPI_ISL_7337525|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21784/2021|EPI_ISL_7337527|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21785/2021|EPI_ISL_7337528|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21788/2021|EPI_ISL_7337531|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21790/2021|EPI_ISL_7337532|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21794/2021|EPI_ISL_7337533|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21795/2021|EPI_ISL_7337534|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21796/2021|EPI_ISL_7337535|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21798/2021|EPI_ISL_7337536|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21799/2021|EPI_ISL_7337537|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21803/2021|EPI_ISL_7337538|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21804/2021|EPI_ISL_7337539|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21806/2021|EPI_ISL_7337540|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21807/2021|EPI_ISL_7337541|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21809/2021|EPI_ISL_7337542|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21810/2021|EPI_ISL_7337543|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21811/2021|EPI_ISL_7337544|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21813/2021|EPI_ISL_7337545|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21814/2021|EPI_ISL_7337546|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21815/2021|EPI_ISL_7337547|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21816/2021|EPI_ISL_7337548|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21817/2021|EPI_ISL_7337549|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21818/2021|EPI_ISL_7337550|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21819/2021|EPI_ISL_7337551|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21822/2021|EPI_ISL_7337553|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21823/2021|EPI_ISL_7337558|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21824/2021|EPI_ISL_7337559|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21825/2021|EPI_ISL_7337560|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21826/2021|EPI_ISL_7337561|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-N21828/2021|EPI_ISL_7337562|Gauteng|2021-11-22=2021-11-22,South_Africa/NICD-N21829/2021|EPI_ISL_7337563|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21830/2021|EPI_ISL_7337564|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-N21398/2021|EPI_ISL_7456440|Gauteng|2021-11-05=2021-11-05,South_Africa/NICD-R16786/2021|EPI_ISL_7456448|Gauteng|2021-11-17=2021-11-17,South_Africa/NICD-R16989/2021|EPI_ISL_7456452|Gauteng|2021-11-23=2021-11-23,South_Africa/NICD-R17329/2021|EPI_ISL_7456455|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-R17341/2021|EPI_ISL_7456456|Gauteng|2021-11-24=2021-11-24,South_Africa/NICD-R17343/2021|EPI_ISL_7456457|Gauteng|2021-11-26=2021-11-26">
+                <taxa id="TaxonSet.GP_fixed_clock_1.1_epo_4" spec="TaxonSet">
+                    <alignment idref="GP_fixed_clock_1.1_epo_4" />
+                </taxa>
+            </trait>
+            <taxonset idref="TaxonSet.GP_fixed_clock_1.1_epo_4" />
+        </tree>
+        <parameter id="clockRate.c:GP_fixed_clock_1.1_epo_4" name="stateNode" spec="parameter.RealParameter">0.0011</parameter>     
+        <parameter id="kappa.s:GP_fixed_clock_1.1_epo_4" lower="0.0" name="stateNode" spec="parameter.RealParameter">2.0</parameter>
+        <parameter dimension="4" id="freqParameter.s:GP_fixed_clock_1.1_epo_4" lower="0.0" name="stateNode" spec="parameter.RealParameter" upper="1.0">0.25</parameter>
+
+        <parameter id="origin.s:GP_fixed_clock_1.1_epo_4" lower="0.0" name="stateNode" upper="2">0.2</parameter>
+        <parameter dimension="5" id="samplingProportion.s:GP_fixed_clock_1.1_epo_4" lower="0.0" name="stateNode" upper="1.0">0.0 0.01 0.01 0.01 0.01</parameter>
+        <parameter dimension="1" id="reproductiveNumber.s:GP_fixed_clock_1.1_epo_4" lower="0.0" name="stateNode" upper="Infinity">2.0</parameter>
+    </state>
+
+    <init estimate="false" id="RandomTree.t:GP_fixed_clock_1.1_epo_4" initial="@Tree.t:GP_fixed_clock_1.1_epo_4" rootHeight="0.1" spec="beast.evolution.tree.RandomTree" taxa="@GP_fixed_clock_1.1_epo_4">
+        <populationModel id="ConstantPopulation0.t:GP_fixed_clock_1.1_epo_4" spec="ConstantPopulation">
+            <parameter id="randomPopSize.t:GP_fixed_clock_1.1_epo_4" name="popSize" spec="parameter.RealParameter">1.0</parameter>
+        </populationModel>
+    </init>
+
+    <distribution id="posterior" spec="util.CompoundDistribution">
+
+    	
+        <distribution id="prior" spec="util.CompoundDistribution">
+            
+            
+            <distribution becomeUninfectiousRate="@becomeUninfectiousRate.s:GP_fixed_clock_1.1_epo_4" id="BirthDeathSkySerial" origin="@origin.s:GP_fixed_clock_1.1_epo_4" reproductiveNumber="@reproductiveNumber.s:GP_fixed_clock_1.1_epo_4" samplingProportion="@samplingProportion.s:GP_fixed_clock_1.1_epo_4" spec="beast.evolution.speciation.BirthDeathSkylineModel" tree="@Tree.t:GP_fixed_clock_1.1_epo_4">                
+                <samplingRateChangeTimes id="SamplingTreeSlice.s:GP_fixed_clock_1.1_epo_4" spec="TreeDateSlicer" tree="@Tree.t:GP_fixed_clock_1.1_epo_4">
+                    <dates dates="2021-11-04 2021-11-09 2021-11-15 2021-11-20" format="yyyy-MM-dd" spec="DateParser" />
+                </samplingRateChangeTimes>
+                <reverseTimeArrays spec="beast.core.parameter.BooleanParameter" value="false false true false false" />
+            </distribution>
+
+            
+            <prior id="reproductiveNumberPrior.s:GP_fixed_clock_1.1_epo_4" name="distribution" x="@reproductiveNumber.s:GP_fixed_clock_1.1_epo_4">
+                <LogNormal M="0.8" S="0.5" name="distr" offset="0.0" />
+            </prior>
+            <prior id="samplingProportionPrior.s:GP_fixed_clock_1.1_epo_4" name="distribution" x="@samplingProportionSlice.s:GP_fixed_clock_1.1_epo_4">
+                <Beta alpha="2" beta="100" name="distr" />
+            </prior>
+            <prior id="originPrior.s:GP_fixed_clock_1.1_epo_4" name="distribution" x="@origin.s:GP_fixed_clock_1.1_epo_4">
+                <LogNormal M="-2" S="0.2" name="distr" offset="0.0" />
+            </prior>
+
+            
+            <prior id="ClockPrior.c:GP_fixed_clock_1.1_epo_4" name="distribution" x="@clockRate.c:GP_fixed_clock_1.1_epo_4">
+                
+                <Gamma alpha="0.001" beta="1000" mode="ShapeScale" name="distr" />                    
+            </prior>     
+            
+            
+            <prior id="FrequenciesPrior.s:GP_fixed_clock_1.1_epo_4" name="distribution" x="@freqParameter.s:GP_fixed_clock_1.1_epo_4">
+                <Uniform id="Uniform.3" name="distr" />
+            </prior>        
+            <prior id="GammaShapePrior.s:GP_fixed_clock_1.1_epo_4" name="distribution" x="@gammaShape.s:GP_fixed_clock_1.1_epo_4">
+                <Exponential mean="1.0" name="distr" />
+            </prior>      
+            <prior id="KappaPrior.s:GP_fixed_clock_1.1_epo_4" name="distribution" x="@kappa.s:GP_fixed_clock_1.1_epo_4">
+                <LogNormal M="1.0" S="1.25" id="LogNormalDistributionModel.0" name="distr" />                    
+            </prior>            
+
+        </distribution>
+        
+
+        
+        <distribution id="likelihood" spec="util.CompoundDistribution" useThreads="true">
+            <distribution data="@GP_fixed_clock_1.1_epo_4" id="treeLikelihood.GP_fixed_clock_1.1_epo_4" spec="ThreadedTreeLikelihood" tree="@Tree.t:GP_fixed_clock_1.1_epo_4">
+
+                <siteModel id="SiteModel.s:GP_fixed_clock_1.1_epo_4" spec="SiteModel">
+                    <parameter estimate="false" id="mutationRate.s:GP_fixed_clock_1.1_epo_4" name="mutationRate" spec="parameter.RealParameter">1.0</parameter>
+                    <parameter estimate="false" id="gammaShape.s:GP_fixed_clock_1.1_epo_4" name="shape" spec="parameter.RealParameter">1.0</parameter>
+                    <parameter estimate="false" id="proportionInvariant.s:GP_fixed_clock_1.1_epo_4" lower="0.0" name="proportionInvariant" spec="parameter.RealParameter" upper="1.0">0.0</parameter>
+                    <substModel id="hky.s:GP_fixed_clock_1.1_epo_4" kappa="@kappa.s:GP_fixed_clock_1.1_epo_4" spec="HKY">
+                        <frequencies frequencies="@freqParameter.s:GP_fixed_clock_1.1_epo_4" id="estimatedFreqs.s:GP_fixed_clock_1.1_epo_4" spec="Frequencies" />
+                    </substModel>                                         
+                </siteModel>
+
+                <branchRateModel clock.rate="@clockRate.c:GP_fixed_clock_1.1_epo_4" id="StrictClock.c:GP_fixed_clock_1.1_epo_4" spec="beast.evolution.branchratemodel.StrictClockModel" />
+
+            </distribution>
+        </distribution>
+        
+
+    </distribution>
+
+
+    
+    <operator id="KappaScaler.s:GP_fixed_clock_1.1_epo_4" parameter="@kappa.s:GP_fixed_clock_1.1_epo_4" scaleFactor="0.5" spec="ScaleOperator" weight="0.1" />    
+    <operator delta="0.01" id="FrequenciesExchanger.s:GP_fixed_clock_1.1_epo_4" spec="DeltaExchangeOperator" weight="0.1">
+        <parameter idref="freqParameter.s:GP_fixed_clock_1.1_epo_4" />
+    </operator>
+
+    
+    <operator id="BDSKY_serialTreeScaler.t:GP_fixed_clock_1.1_epo_4" scaleFactor="0.5" spec="ScaleOperator" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" weight="3.0" />
+    <operator id="BDSKY_serialTreeRootScaler.t:GP_fixed_clock_1.1_epo_4" rootOnly="true" scaleFactor="0.5" spec="ScaleOperator" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" weight="3.0" />
+    <operator id="BDSKY_serialUniformOperator.t:GP_fixed_clock_1.1_epo_4" spec="Uniform" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" weight="30.0" />
+    <operator id="BDSKY_serialSubtreeSlide.t:GP_fixed_clock_1.1_epo_4" spec="SubtreeSlide" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" weight="15.0" />
+    <operator id="BDSKY_serialNarrow.t:GP_fixed_clock_1.1_epo_4" spec="Exchange" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" weight="15.0" />
+    <operator id="BDSKY_serialWide.t:GP_fixed_clock_1.1_epo_4" isNarrow="false" spec="Exchange" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" weight="3.0" />
+    <operator id="BDSKY_serialWilsonBalding.t:GP_fixed_clock_1.1_epo_4" spec="WilsonBalding" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" weight="3.0" />
+
+    
+    <operator id="samplingScaler.s:GP_fixed_clock_1.1_epo_4" parameter="@samplingProportion.s:GP_fixed_clock_1.1_epo_4" scaleFactor="0.75" spec="ScaleOperator" weight="2.0" />
+    <operator id="reproductiveNumberScaler.s:GP_fixed_clock_1.1_epo_4" parameter="@reproductiveNumber.s:GP_fixed_clock_1.1_epo_4" scaleFactor="0.75" spec="ScaleOperator" weight="10.0" />
+    <operator id="origScaler.s:GP_fixed_clock_1.1_epo_4" parameter="@origin.s:GP_fixed_clock_1.1_epo_4" scaleFactor="0.75" spec="ScaleOperator" weight="1.0" />
+  
+
+    <logger fileName="GP_fixed_clock_1.1_epo_4.log" id="tracelog" logEvery="10000" model="@posterior" sanitiseHeaders="true" sort="smart" spec="Logger">
+        <log idref="posterior" />
+        <log idref="likelihood" />
+        <log idref="prior" />
+        <log idref="treeLikelihood.GP_fixed_clock_1.1_epo_4" />
+        <log id="TreeHeight.t:GP_fixed_clock_1.1_epo_4" spec="beast.evolution.tree.TreeHeightLogger" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" />
+
+        <log idref="clockRate.c:GP_fixed_clock_1.1_epo_4" />
+        <log idref="kappa.s:GP_fixed_clock_1.1_epo_4" />        
+        <log idref="freqParameter.s:GP_fixed_clock_1.1_epo_4" />
+
+        <log idref="origin.s:GP_fixed_clock_1.1_epo_4" />
+        <log idref="becomeUninfectiousRate.s:GP_fixed_clock_1.1_epo_4" />
+        <log idref="reproductiveNumber.s:GP_fixed_clock_1.1_epo_4" />
+        <log idref="samplingProportion.s:GP_fixed_clock_1.1_epo_4" />
+
+        <log spec="TreeSliceDateLogger" treeSlice="@SamplingTreeSlice.s:GP_fixed_clock_1.1_epo_4" />
+        
+    </logger>
+
+    <logger id="screenlog" logEvery="10000" spec="Logger">
+        <log idref="posterior" />
+        <log idref="likelihood" />
+        <log idref="prior" />
+    </logger>
+
+    <logger fileName="GP_fixed_clock_1.1_epo_4.trees" id="treelog" logEvery="10000" mode="tree" spec="Logger">
+        <log id="TreeWithMetaDataLogger.t:GP_fixed_clock_1.1_epo_4" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:GP_fixed_clock_1.1_epo_4" />
+    </logger>
+
+</run>
+
+</beast>
